@@ -1,0 +1,230 @@
+/* Stylesheet skrevet av kandidat 145 */
+
+/* Fonter importert fra Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap%27');
+
+/* Mobil- og nettbrettdesign: */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.banner {
+    top: 0;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 100%;
+    filter: brightness(80%);
+    margin-bottom: 1em;
+}
+
+#banner-tekst {
+    position: absolute;
+    font-family: Roboto, sans-serif;
+    top: 20%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6em;
+    text-shadow: #000000 1px 0 10px;
+    text-align: center;
+    width: 80%;
+}
+
+.language {
+    display: inline-block;
+    background-color: #424242;
+    color: white;
+    text-decoration: none;
+    margin: 0.5em;
+    padding: 1em;
+    max-width: 100%;
+    position: static;
+    right: 0;
+}
+
+.language:hover {
+    background-color: #bd4e10;
+}
+
+#intro-tekst {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 1em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#mobil-heading {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.kort-innhold img {
+    display: none;
+}
+
+.kort-innhold h1 {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 1.5em;
+    margin-left: 4em;
+    margin-right: 4em;
+    background-color: #424242;
+    color: white;
+    padding: 1em;
+}
+
+.kort-innhold:active h1 {
+    background: #bd4e10;
+}
+
+.kort-innhold p {
+    display: none;
+}
+
+#instalink {
+    text-decoration: none;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    background-color: #424242;
+    color: #bd4e10;
+}
+
+footer {
+    border-top: #bd4e10;
+    border-top-style: solid;
+    border-width: 1em;
+    padding: 3em;
+    color: white;
+    background-color: #424242;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    margin-top: 4em;
+    line-height: 1.5em;
+}
+
+/* Desktop-design: */
+@media only screen and (min-width: 1000px) {
+
+    .banner {
+        top: 0;
+        position: relative;
+    }
+
+    /*Spesifiserer bilde crop og størrelse*/
+    .banner img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: 100%;
+        filter: brightness(80%);
+        margin-bottom: 0;
+    }
+
+    /*Spesifiserer hvor teksten skal være*/
+    #banner-tekst {
+        position: absolute;
+        font-family: Roboto, sans-serif;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2.6em;
+        text-shadow: #000000 1px 0 10px;
+        text-align: center;
+        width: 80%;
+    }
+
+    #intro-tekst {
+        font-family: Lato, sans-serif;
+        font-size: 1.2em;
+        width: 40%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #mobil-heading {
+        display: none;
+    }
+
+    .bokser {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 2em 0 5em;
+    }
+
+    .kort{
+        backdrop-filter: blur();
+        transition: 0.3s;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .kort-innhold {
+        padding: 15px;
+        width: 25%;
+        text-decoration: none;
+        color: black;
+        margin: 1em;
+        box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+    }
+
+    .kort-innhold img {
+        display: block;
+        object-fit: cover;
+    }
+
+    .kort-innhold h1 {
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-size: 1.5em;
+        margin-left: 1em;
+        margin-right: 1em;
+        background-color: #424242;
+        color: white;
+        padding: 1em;
+    }
+
+    .kort-innhold p {
+        display: block;
+        text-align: center;
+        font-family: Lato, sans-serif;
+        font-size: 1em;
+    }
+
+    .kort-innhold:focus {
+        background-color: rgba(241, 241, 241, 0.44);
+        box-shadow: 0 8px 16px 2px rgba(0,0,0,0.2);
+    }
+
+    .kort-innhold:hover {
+        background-color: rgba(241, 241, 241, 0.44);
+        box-shadow: 0 8px 16px 2px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+
+    .kort-innhold:hover h1 {
+        background: #bd4e10;
+    }
+
+    .kort-innhold:active {
+        box-shadow: 0 8px 16px 6px rgba(0,0,0,0.2);
+    }
+
+    footer {
+        margin-top: 1em;
+    }
+
+}

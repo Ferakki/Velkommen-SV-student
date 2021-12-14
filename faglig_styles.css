@@ -1,0 +1,234 @@
+/* Made by candidate number: 118 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap%27');
+
+/* This file prioritizes the mobile first design. Each tag here until the media query is
+		responsive for both mobile and desktop or mobile only */
+
+/* adds line height for text. Easier on the eye */
+body {
+    margin: 0;
+}
+
+.language {
+    display: inline-block;
+    background-color: #424242;
+    color: white;
+    text-decoration: none;
+    margin: 0.5em;
+    padding: 1em;
+    max-width: 100%;
+    position: static;
+    right: 0;
+}
+
+.language:hover {
+    background-color: #bd4e10;
+}
+
+/* Gives it a banner look */
+.books {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.first_paragraf {
+    margin: auto;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 2em;
+    background-color: #bd4e10;
+    color: white;
+    margin-right: 1em;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+h2 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.8em;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-family: Lato, sans-serif;
+    font-size: 1.5em;
+    word-wrap: break-word;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.plasser {
+    display: inline-block;
+    margin: auto;
+    padding: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    display: block;
+    border: none;
+    color: white;
+    background-color: #BD4E12;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+.bibliotek img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bibliotek section {
+    display: inline-block;
+    padding: 1em;
+}
+
+iframe {
+    max-width: 100%;
+    margin: auto;
+}
+
+footer {
+    border-top: #bd4e10;
+    border-top-style: solid;
+    border-width: 1em;
+    margin: 0;
+    margin-top: 2em;
+    padding: 3em;
+    color: white;
+    background-color: #424242;
+    text-align: center;
+    font-family: Lato, sans-serif;
+}
+
+#instalink {
+    text-decoration: none;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    background-color: #424242;
+    color: #bd4e10;
+}
+
+/* Desktop design. Kicks inn whenever the viewport is more than 1000px */
+@media only screen and (min-width: 1000px) {
+    h1 {
+        grid-area: heading;
+        align-self: start;
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-size: 2em;
+        background-color: #bd4e10;
+        color: white;
+        padding: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 1em;
+    }
+
+    .books {
+        max-width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .plasser {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+			"top_left top_right"
+			"bottom_left bottom_right";
+        grid-gap: 1em;
+        font-family: Lato, sans-serif;
+        margin: auto;
+    }
+
+    .vektergården {
+        grid-area: top_left;
+        margin-left: 10em;
+    }
+
+    .eldoradogården {
+        grid-area: top_right;
+        margin-right: 10em;
+    }
+
+    .sv {
+        grid-area: bottom_left;
+        margin-left: 10em;
+    }
+
+    .jakobs {
+        grid-area: bottom_right;
+        margin-right: 10em;
+    }
+
+    h2 {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .plasser img {
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .bibliotek img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    address, time {
+        margin-left: 1em;
+    }
+
+    iframe {
+        display: flex;
+        flex-direction: row;
+        padding: 1em;
+    }
+
+    body p {
+        width: 80%;
+        margin: 1em auto;
+    }
+
+}
+

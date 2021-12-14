@@ -1,0 +1,135 @@
+/*Stylesheet skrevet av kandidater 145 og 143 */
+
+/* Fonter importert med Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap%27');
+
+
+/* Mobildesign */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#intro-overskrift {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 2em;
+    background-color: #bd4e10;
+    color: white;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+h2 {
+    font-family: Lato, sans-serif;
+    text-align: center;
+}
+
+.intro-tekst {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 1em;
+    width: 80%;
+    padding-bottom: 1em;
+    margin: 0 auto;
+}
+
+main p:nth-child(5) {
+    border-bottom: 1px solid black;
+}
+
+.kort-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Lato, sans-serif;
+}
+
+.kort{
+    justify-content: center;
+}
+
+.kort-innhold {
+    padding: 20px;
+}
+
+.kort-innhold > img {
+    width: 100%;
+    height: auto;
+}
+
+.kort-overskrift {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+}
+
+.kort-innhold > h2 {
+    font-size: 1em;
+}
+
+.kort-innhold > p {
+    font-size: 1em;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    line-height: 1.5em;
+}
+
+#kort-tittel {
+    text-align: center;
+}
+
+#instalink {
+    text-decoration: none;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    background-color: #424242;
+    color: #bd4e10;
+}
+
+footer {
+    border-top: #bd4e10;
+    border-top-style: solid;
+    border-width: 1em;
+    margin: 2em 0 0;
+    padding: 3em;
+    color: white;
+    background-color: #424242;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    line-height: 1.5em;
+}
+
+/* Desktopdesign */
+@media only screen and (min-width: 1000px) {
+
+    #intro-overskrift {
+        grid-area: heading;
+        align-self: start;
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-size: 2em;
+        background-color: #bd4e10;
+        color: white;
+        padding: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .intro-tekst {
+        grid-area: intro;
+        text-align: center;
+        font-family: Lato, sans-serif;
+        font-size: 1.2em;
+        width: 45%;
+        padding-bottom: 1em;
+        margin: 0 auto 0.5em;
+    }
+
+}

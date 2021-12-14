@@ -1,0 +1,204 @@
+/* Stylesheet skrevet av kandidat 145 */
+
+/* Fonter importert fra Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap%27');
+
+/* Mobil- og nettbrettdesign: */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 2em;
+    background-color: #bd4e10;
+    color: white;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+#intro-tekst {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 1em;
+    width: 80%;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+}
+
+.bildetekst {
+    font-family: Lato, sans-serif;
+    font-style: italic;
+    font-size: 0.7em;
+    color: #8a8383;
+}
+
+.mobil-heading {
+    font-family: Lato, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#info-studentsenteret, #info-sv-kaffebar {
+    font-family: Lato, sans-serif;
+    font-size: 1em;
+    margin: 1em;
+}
+
+#info-studentsenteret h2, #info-sv-kaffebar h2 { /* Gjemmer overskriftene til lokalene som er ment å kun ha på desktopdesignet*/
+    display: none;
+}
+
+#instalink {
+    text-decoration: none;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    background-color: #424242;
+    color: #bd4e10;
+}
+
+footer {
+    border-top: #bd4e10;
+    border-top-style: solid;
+    border-width: 1em;
+    margin: 0;
+    padding: 3em;
+    color: white;
+    background-color: #424242;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    line-height: 1.5em;
+}
+
+/* Design på eksterne linker: */
+main a:link {
+    color:blue;
+}
+
+main a:visited {
+    color:purple;
+}
+
+main a:focus {
+    border: 1px solid black;
+}
+
+main a:hover {
+    cursor: pointer;
+}
+
+main a:active {
+    border: 1px solid black;
+}
+
+/* Desktop-design: */
+@media only screen and (min-width: 1000px) {
+
+    main {
+        display: grid;
+        grid-template-rows: 1.5fr auto 5fr 5fr;
+        grid-template-columns: repeat(2, 5fr);
+        grid-template-areas:
+                    "heading heading"
+                    "intro intro"
+                    "image1 text1"
+                    "text2 image2";
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    h1 {
+        grid-area: heading;
+        align-self: start;
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-size: 2em;
+        background-color: #bd4e10;
+        color: white;
+        padding: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .language {
+        grid-area: knapp;
+    }
+
+    #intro-tekst {
+        grid-area: intro;
+        text-align: center;
+        font-family: Lato, sans-serif;
+        font-size: 1.2em;
+        width: 35%;
+        padding-bottom: 1em;
+        margin: 0 auto 0.5em;
+        border-bottom: 1px solid black;
+    }
+
+    .mobil-heading {
+        display: none;
+    }
+
+    #bilde-sv-kaffebar {
+        grid-area: image1;
+        margin-left: 1em;
+    }
+
+    #bilde-studentsenteret {
+        grid-area: image2;
+        margin-right: 1em;
+    }
+
+    .bildetekst {
+        font-family: Lato, sans-serif;
+        font-style: italic;
+        font-size: 0.7em;
+        color: #8a8383;
+    }
+
+    #info-sv-kaffebar {
+        grid-area: text1;
+        font-family: Lato, sans-serif;
+        font-size: 1em;
+    }
+
+    #info-studentsenteret {
+        grid-area: text2;
+        font-family: Lato, sans-serif;
+        font-size: 1em;
+    }
+
+    /* Reverserer display: none; på mobildesignet */
+    #info-sv-kaffebar h2, #info-studentsenteret h2 {
+        display: block;
+        margin-top: 0;
+    }
+
+    #sv_adresse, #sv_åpningstider, #ss_adresse, #ss_åpningstider {
+        float: left;
+    }
+
+    #sv_åpningstider, #ss_åpningstider {
+        margin-left: 2em;
+    }
+
+    footer {
+        border-top: #bd4e10;
+        border-top-style: solid;
+        border-width: 1em;
+        margin: 2em 0 0;
+        padding: 3em;
+        color: white;
+        background-color: #424242;
+        text-align: center;
+        font-family: Lato, sans-serif;
+    }
+}

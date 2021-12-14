@@ -1,0 +1,222 @@
+/*Denne siden er hovedsakelig skrevet av kandidat 143*/
+
+/* Fonter importert fra Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap%27');
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Setter fonter: */
+h1, h2, h3, h4 {
+    font-family: Roboto, sans-serif;
+}
+
+p, a {
+    font-family: Lato, sans-serif;
+    font-size: 1em;
+}
+
+figcaption {
+    font-family: Lato, cursive;
+    font-style: italic;
+}
+
+img {
+    width: 100%;
+}
+
+.banner {
+    top: 0;
+    position: relative;
+}
+
+footer {
+    border-top: #bd4e10;
+    border-top-style: solid;
+    border-width: 1em;
+    padding: 2em;
+    color: white;
+    background-color: #424242;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    margin-top: 4em;
+}
+
+#instalink {
+    text-decoration: none;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    background-color: #424242;
+    color: #bd4e10;
+}
+
+@media screen and (max-width: 999px) {
+
+    h1 {
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-size: 2em;
+        background-color: #bd4e10;
+        color: white;
+        margin-top: 1em;
+        margin-right: 1em;
+        margin-left: 1em;
+        padding: 1em;
+    }
+
+    main {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tekst {
+        text-align: center;
+    }
+
+    p.tekst {
+        margin: 20px 40px 30px 40px;
+    }
+
+    h2.tekst {
+        margin-bottom: 0;
+    }
+
+    h3.tekst {
+        background-color: #d95912;
+        padding: 7px;
+        margin: 35px 40px 10px 40px;
+        font-size: 1em;
+    }
+
+    h4.tekst {
+        font-size: 0.95em;
+    }
+
+    ul.tekst {
+        margin: 1em 4em 2em 4em;
+        text-align: left;
+    }
+
+    .utside {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 30px 5px 30px;
+    }
+
+    #diskuter_utside {
+        width: 90%;
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1000px) {
+    .intro {
+        grid-area: intr;
+    }
+
+    .studentutvalg {
+        grid-area: stud;
+    }
+
+    .fagutvalg {
+        grid-area: fag;
+    }
+
+    .fagutvalg_list {
+        grid-area: fag_list;
+    }
+
+    .disk_overskrift {
+        grid-area: disk
+    }
+
+    .bilde_diskuterbar {
+        grid-area: bilde_disk;
+    }
+
+    .diskuterbar_info {
+        grid-area: disk_info
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-size: 2em;
+        background-color: #bd4e10;
+        color: white;
+        padding: 1em;
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .grid-container {
+        display: grid;
+        flex-wrap: wrap;
+        width: 100%;
+        grid-template-areas:
+                "intr intr"
+                "stud stud"
+                "fag fag_list"
+                "disk disk"
+                "bilde_disk disk_info";
+        background-color: #ffffff;
+        justify-content: center;
+        row-gap: 40px;
+        grid-template-columns: 400px 400px;
+    }
+
+    .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        justify-content: center;
+    }
+
+    p.tekst {
+        padding: 0 150px 0 150px;
+        width: 100%;
+        text-align: left;
+        display: contents;
+    }
+
+    ul.tekst {
+        text-align: left;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .disk_tekst {
+        padding-top: 80px;
+    }
+
+    .redusert {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .diskuterbar_info > div {
+        padding-top: 10px;
+    }
+
+    .disk_overskrift {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}
